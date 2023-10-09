@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    GITHUB_API_TOKEN=credentials('github-api-token')
+  }
   stages {
     stage('verify installation') {
       steps {
