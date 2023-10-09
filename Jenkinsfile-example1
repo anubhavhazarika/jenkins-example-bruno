@@ -17,8 +17,7 @@ pipeline {
       steps {
         dir('example1') {
           sh '''
-            bru run get.bru --output results.json
-            cat results.json
+            bru run get.bru
           '''
         }
       }
