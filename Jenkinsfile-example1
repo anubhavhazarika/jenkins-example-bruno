@@ -13,7 +13,7 @@ pipeline {
         }
       }
     }
-    stage('explicityly run get') {
+    stage('explicityly run get-usebruno-user-information') {
       steps {
         dir('example1') {
           sh '''
