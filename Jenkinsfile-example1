@@ -6,7 +6,14 @@ pipeline {
         sh 'bru --version'
       }
     }
-    stage('run get2') {
+    stage('run all files in the collection') {
+      steps {
+        dir('example1') {
+          sh 'bru run'
+        }
+      }
+    }
+    stage('explicityly run get') {
       steps {
         dir('example1') {
           sh '''
