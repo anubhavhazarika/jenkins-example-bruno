@@ -16,7 +16,7 @@ headers {
 }
 
 auth:bearer {
-  token: {{env.GITHUB_API_TOKEN}}
+  token: {{process.env.GITHUB_API_TOKEN}}
 }
 
 body:json {
