@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+  stages {
+    stage('verify installation') {
+      steps {
+        sh 'bru --version'
+      }
+    }
+    stage('run example') {
+      steps {
+        dir('example1') {
+          sh 'bru run get.bru'
+        }
+      }
+    }
+  }
+}
