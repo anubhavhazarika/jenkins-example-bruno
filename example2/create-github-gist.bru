@@ -1,0 +1,24 @@
+meta {
+  name: Create GitHub Gist
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api.github.com/gists
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept: application/vnd.github+json
+  X-GitHub-Api-Version: 2022-11-28
+}
+
+auth:bearer {
+  token: {{process.env.GITHUB_API_TOKEN}}
+}
+
+body:json {
+  {"description":"Example of a gist","public":false,"files":{"README.md":{"content":"Hello World"}}}
+}
