@@ -6,4 +6,12 @@ meta {
 
 get {
   url: https://api.github.com/users/usebruno
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: 200
+  res.body.login: usebruno
+  res.body.id: 114530840
 }
