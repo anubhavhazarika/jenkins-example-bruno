@@ -17,7 +17,7 @@ pipeline {
       steps {
         dir('example1') {
           sh '''
-            bru run get.bru
+            bru run get-usebruno-user-information.bru
           '''
         }
       }
