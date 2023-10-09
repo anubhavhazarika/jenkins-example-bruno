@@ -9,7 +9,10 @@ pipeline {
     stage('run get2') {
       steps {
         dir('example1') {
-          sh 'bru run get.bru --output results.json'
+          sh '''
+            bru run get.bru --output results.json
+            cat results.json
+          '''
         }
       }
     }
