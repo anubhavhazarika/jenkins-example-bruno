@@ -15,3 +15,20 @@ assert {
   res.body.login: usebruno
   res.body.id: 114530840
 }
+
+tests {
+  test("should be able to login", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("should receive the login", function() {
+    const data = res.getBody();
+    expect(data.login).to.be.a('string');
+  });
+  
+  test("login should be usebruno", function() {
+    const data = res.getBody();
+    expect(data.login).to.equal('usebruno');
+  });
+}
