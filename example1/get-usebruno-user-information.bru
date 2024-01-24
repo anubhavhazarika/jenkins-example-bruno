@@ -11,10 +11,11 @@ get {
 }
 
 assert {
-  res.status: 200
+  res.status: 300
   res.body.login: usebruno
   res.body.id: 114530840
 }
+
 
 tests {
   test("should be able to login", function() {
